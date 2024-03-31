@@ -20,6 +20,9 @@
 /processorParam:TextureFormat=Compressed
 /build:Fonts/TextFont.spritefont
 
+#begin Maps/Test Map.tmx
+/copy:Maps/Test Map.tmx
+
 #begin Sprites/Player_IdleSpritesheet.jpg
 /importer:TextureImporter
 /processor:TextureProcessor

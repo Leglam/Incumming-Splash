@@ -27,3 +27,4 @@ C:\Users\LeglamOat\Desktop\ComGame_PJ\Incumming Splash\Incumming Splash\Incummin
 C:\Users\LeglamOat\Desktop\ComGame_PJ\Incumming Splash\Incumming Splash\Incumming Splash\obj\Debug\net6.0\ref\Incumming Splash.dll
 C:\Users\LeglamOat\Desktop\ComGame_PJ\Incumming Splash\Incumming Splash\Incumming Splash\bin\Debug\net6.0\Content\Sprites\Player_Spritesheet.xnb
 C:\Users\LeglamOat\Desktop\ComGame_PJ\Incumming Splash\Incumming Splash\Incumming Splash\bin\Debug\net6.0\Content\Sprites\Player_IdleSpritesheet.xnb
+C:\Users\LeglamOat\Desktop\ComGame_PJ\Incumming Splash\Incumming Splash\Incumming Splash\obj\Debug\net6.0\Incumming Splash.sourcelink.json

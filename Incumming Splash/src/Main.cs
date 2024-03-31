@@ -10,7 +10,15 @@ namespace Incumming_Splash
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
 
+        #region Tilemaps
+        private TmxMap map;
+        private TileMapManager tileMapManager;
+        private Texture2D tileset;
+        #endregion
+
+        #region Player
         private Player player;
+        #endregion
 
         private SpriteFont textFont;
         private Vector2 textPos;
@@ -50,15 +58,17 @@ namespace Incumming_Splash
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            //background = Content.Load<Texture2D>("Texture/Map");
-            bgRect = new Rectangle(0, 0, graphics.GraphicsDevice.Viewport.Width, graphics.GraphicsDevice.Viewport.Height);
+            #region Tilemap
 
-            textFont = Content.Load<SpriteFont>("Fonts/TextFont");
-            textPos = new Vector2(0, 10);
+            #endregion
 
-            player = new Player(Content.Load<Texture2D>("Sprites/Player_Spritesheet"),
-            Content.Load<Texture2D>("Sprites/Player_IdleSpritesheet"));
-            
+            #region Player
+            player = new Player(
+                Content.Load<Texture2D>("Sprites/Player_Spritesheet"),
+                Content.Load<Texture2D>("Sprites/Player_IdleSpritesheet")
+            );
+            #endregion
+
         }
 
         protected override void Update(GameTime gameTime)
