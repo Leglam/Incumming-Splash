@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/LeglamOat/Desktop/ComGame_PJ/Incumming Splash/Incumming Splash/Incumming Splash/Content/Fonts/TextFont.spritefont</File>
+    <File>C:/Users/LeglamOat/Desktop/ComGame_PJ/Incumming Splash/Incumming Splash/Incumming Splash/Content/Sprites/Player_IdleSpritesheet.jpg</File>
+    <File>C:/Users/LeglamOat/Desktop/ComGame_PJ/Incumming Splash/Incumming Splash/Incumming Splash/Content/Sprites/Player_Spritesheet.jpg</File>
+    <File>C:/Users/LeglamOat/Desktop/ComGame_PJ/Incumming Splash/Incumming Splash/Incumming Splash/Content/Sprites/Player.jpg</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

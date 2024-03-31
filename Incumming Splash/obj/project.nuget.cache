@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "ynksSr6551uoqS82TTATSdPx4z5+YfIlN1etj5s8g4yC77uAZzQ3UAEeJPLh7iE3VdyKD08vOg6hvtdIxOdSqg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\LeglamOat\\Desktop\\ComGame_PJ\\Incumming Splash\\Incumming Splash\\Incumming Splash\\Incumming Splash.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\LeglamOat\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\LeglamOat\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\LeglamOat\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\LeglamOat\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\LeglamOat\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\LeglamOat\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.28\\microsoft.netcore.app.host.win-x64.6.0.28.nupkg.sha512"
+  ],
+  "logs": []
+}
