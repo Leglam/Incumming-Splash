@@ -13,12 +13,11 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin Fonts/TextFont.spritefont
-/importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
-/processorParam:PremultiplyAlpha=True
-/processorParam:TextureFormat=Compressed
-/build:Fonts/TextFont.spritefont
+#begin Maps/color-block.tsx
+/copy:Maps/color-block.tsx
+
+#begin Maps/map1.tmx
+/copy:Maps/map1.tmx
 
 #begin Maps/Test Map.tmx
 /copy:Maps/Test Map.tmx
@@ -58,4 +57,28 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Sprites/Player.jpg
+
+#begin TIlesets/color-block.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TIlesets/color-block.png
+
+#begin TIlesets/World1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TIlesets/World1.png
 

@@ -2,6 +2,8 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Collections.Generic;
+using TiledSharp;
 
 namespace Incumming_Splash
 {
@@ -59,7 +61,12 @@ namespace Incumming_Splash
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             #region Tilemap
-
+            map = new TmxMap("Content/Maps/map1.tmx");
+            tileset = Content.Load<Texture2D>("Tilesets/" + map.Tilesets[1].Name.ToString());
+            int tileWidth = map.Tilesets[0].TileWidth;
+            int tileHeight = map.Tilesets[0].TileHeight;
+            int TileSetTilesWidth = tileset.Width / tileWidth;
+            tileMapManager = new TileMapManager(map, tileset, TileSetTilesWidth, tileWidth, tileHeight);
             #endregion
 
             #region Player
@@ -83,6 +90,7 @@ namespace Incumming_Splash
 
             spriteBatch.Begin();
 
+            tileMapManager.Draw(spriteBatch);
             player.Draw(spriteBatch, gameTime);
             
             spriteBatch.End();
