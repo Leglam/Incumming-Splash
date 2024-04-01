@@ -13,14 +13,11 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin Maps/color-block.tsx
-/copy:Maps/color-block.tsx
+#begin Maps/TestMap.tmx
+/copy:Maps/TestMap.tmx
 
-#begin Maps/map1.tmx
-/copy:Maps/map1.tmx
-
-#begin Maps/Test Map.tmx
-/copy:Maps/Test Map.tmx
+#begin Maps/World1.tsx
+/copy:Maps/World1.tsx
 
 #begin Sprites/Player_IdleSpritesheet.jpg
 /importer:TextureImporter
@@ -58,7 +55,7 @@
 /processorParam:TextureFormat=Color
 /build:Sprites/Player.jpg
 
-#begin TIlesets/color-block.png
+#begin Tilesets/World1.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -68,17 +65,5 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:TIlesets/color-block.png
-
-#begin TIlesets/World1.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TIlesets/World1.png
+/build:Tilesets/World1.png
 

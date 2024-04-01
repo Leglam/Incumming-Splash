@@ -12,6 +12,7 @@ namespace Incumming_Splash.src
     {
         public Texture2D spriteSheet;
         public Vector2 position;
+        public Rectangle hitbox;
 
         public enum currentAnimation
         {

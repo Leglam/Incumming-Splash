@@ -7,7 +7,12 @@ namespace Incumming_Splash.src
     internal class Player:Entity
     {
         public Vector2 velocity;
+
         public float playerSpeed = 5;
+        public float fallSpeed = 2;
+        public bool isFalling = true;
+        public bool isIntersecting = false;
+
         public Animation[] playerAnimation;
         public currentAnimation playerAnimationController;
 
@@ -15,11 +20,13 @@ namespace Incumming_Splash.src
 
         public Player(Texture2D runSprite, Texture2D idleSprite) 
         {
-            spriteSheet = runSprite;
+            position = new Vector2();
             velocity = new Vector2();
             playerAnimation = new Animation[2];
+
             playerAnimation[0] = new Animation(idleSprite);
             playerAnimation[1] = new Animation(runSprite);
+            hitbox = new Rectangle((int)position.X, (int)position.Y, 32, 32);
         }
 
         public override void Update()
@@ -27,7 +34,11 @@ namespace Incumming_Splash.src
             keyboardState = Keyboard.GetState();
 
             playerAnimationController = currentAnimation.Idle;
-
+            if (isFalling && !isIntersecting)
+            {
+                velocity.Y += fallSpeed;
+            }
+            
             if (keyboardState.IsKeyDown(Keys.D))
             {
                 velocity.X += playerSpeed;
@@ -40,6 +51,8 @@ namespace Incumming_Splash.src
             }
 
             position = velocity;
+            hitbox.X = (int)position.X;
+            hitbox.Y = (int)position.Y;
         }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
@@ -54,7 +67,6 @@ namespace Incumming_Splash.src
                     break;
             }
             
-            //spriteBatch.Draw(spriteSheet, velocity, Color.White);
         }
     }
 }

@@ -1,6 +1,7 @@
 /* Distributed as part of TiledSharp, Copyright 2012 Marshall Ward
  * Licensed under the Apache License, Version 2.0
  * http://www.apache.org/licenses/LICENSE-2.0 */
+using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -94,6 +95,11 @@ namespace TiledSharp
 
                 Properties = new PropertyDict(xTileset.Element("properties"));
             }
+        }
+
+        internal void Add(Texture2D texture)
+        {
+            throw new NotImplementedException();
         }
     }
 

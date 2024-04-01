@@ -16,6 +16,10 @@ namespace Incumming_Splash
         private TmxMap map;
         private TileMapManager tileMapManager;
         private Texture2D tileset;
+        private List<Rectangle> collisionRects;
+        private Rectangle startRect;
+        private Rectangle endRect;
+
         #endregion
 
         #region Player
@@ -61,13 +65,22 @@ namespace Incumming_Splash
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             #region Tilemap
-            map = new TmxMap("Content/Maps/map1.tmx");
-            tileset = Content.Load<Texture2D>("Tilesets/" + map.Tilesets[1].Name.ToString());
+            map = new TmxMap("Content/Maps/TestMap.tmx");
+            tileset = Content.Load<Texture2D>("Tilesets/" + map.Tilesets[0].Name.ToString());
             int tileWidth = map.Tilesets[0].TileWidth;
             int tileHeight = map.Tilesets[0].TileHeight;
             int TileSetTilesWidth = tileset.Width / tileWidth;
             tileMapManager = new TileMapManager(map, tileset, TileSetTilesWidth, tileWidth, tileHeight);
             #endregion
+
+            collisionRects = new List<Rectangle>();
+            foreach (var o in map.ObjectGroups["Collision"].Objects)
+            {
+                if (o.Name == "")
+                {
+                    collisionRects.Add(new Rectangle((int)o.X, (int)o.Y, (int)o.Width, (int)o.Height));
+                }
+            }
 
             #region Player
             player = new Player(
@@ -80,7 +93,18 @@ namespace Incumming_Splash
 
         protected override void Update(GameTime gameTime)
         {
+            var initPos = player.position;
             player.Update();
+            foreach (var rect in collisionRects)
+            {
+                if(rect.Intersects(player.hitbox))
+                {
+                    player.position.Y = initPos.Y;
+                    player.velocity.Y = initPos.Y;
+                    break;
+                }
+            }
+
             base.Update(gameTime);
         }
 
