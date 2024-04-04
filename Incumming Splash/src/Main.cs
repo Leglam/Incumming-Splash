@@ -13,6 +13,12 @@ namespace Incumming_Splash
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
 
+        #region Enemy
+        private Enemy dinosaur;
+        private List<Enemy> enemies;
+        private List<Rectangle> enemyPathway;
+        #endregion
+
         #region Tilemaps
         private TmxMap map;
         private TileMapManager tileMapManager;
@@ -74,6 +80,7 @@ namespace Incumming_Splash
             #endregion
 
             collisionRects = new List<Rectangle>();
+            
             foreach (var o in map.ObjectGroups["Collision"].Objects)
             {
                 if (o.Name == "")
@@ -91,6 +98,20 @@ namespace Incumming_Splash
                 }
             }
 
+            enemyPathway = new List<Rectangle>();
+            
+            foreach (var o in map.ObjectGroups["EnemyPathways"].Objects)
+            {
+                enemyPathway.Add(new Rectangle((int)o.X, (int)o.Y, (int)o.Width, (int)o.Height));
+            }
+
+            enemies = new List<Enemy>();
+            dinosaur = new Enemy(
+                Content.Load<Texture2D>("Sprites/Player"),
+                enemyPathway[0]
+                );
+            enemies.Add( dinosaur );
+
             #region Player
             player = new Player(
                 new Vector2(startRect.X, startRect.Y),
@@ -105,6 +126,13 @@ namespace Incumming_Splash
 
         protected override void Update(GameTime gameTime)
         {
+            #region Enemies
+            foreach(var enemy in enemies)
+            {
+                enemy.Update();
+            }
+            #endregion
+
             var initPos = player.position;
             player.Update();
 
@@ -146,6 +174,14 @@ namespace Incumming_Splash
             spriteBatch.Begin();
 
             tileMapManager.Draw(spriteBatch);
+
+            #region Enemies
+            foreach (var enemy in enemies)
+            {
+                enemy.Draw(spriteBatch, gameTime);
+            }
+            #endregion
+
             player.Draw(spriteBatch, gameTime);
             
             spriteBatch.End();

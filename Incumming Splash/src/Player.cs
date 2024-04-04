@@ -112,10 +112,10 @@ namespace Incumming_Splash.src
                     playerAnimation[1].Draw(spriteBatch, position, gameTime, 150, effect);
                     break;
                 case currentAnimation.Jump:
-                    playerAnimation[2].Draw(spriteBatch, position, gameTime, 150);
+                    playerAnimation[2].Draw(spriteBatch, position, gameTime, 150, effect);
                     break;
                 case currentAnimation.Fall:
-                    playerAnimation[3].Draw(spriteBatch, position, gameTime, 600);
+                    playerAnimation[3].Draw(spriteBatch, position, gameTime, 600, effect);
                     break;
             }
         }
