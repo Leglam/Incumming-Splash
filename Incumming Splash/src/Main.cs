@@ -19,6 +19,11 @@ namespace Incumming_Splash
         private List<Rectangle> enemyPathway;
         #endregion
 
+        #region Camera
+        private Camera camera;
+        private Matrix transformMatrix;
+        #endregion
+
         #region Tilemaps
         private TmxMap map;
         private TileMapManager tileMapManager;
@@ -44,7 +49,7 @@ namespace Incumming_Splash
         private KeyboardState keyboardState;
         private const int speed = 5;
 
-        private const int ScreenW = 1600, ScreenH = 900;
+        public const int ScreenW = 1024, ScreenH = 850;
 
         public Main()
         {
@@ -98,6 +103,10 @@ namespace Incumming_Splash
                 }
             }
 
+            #region Camera
+            camera = new Camera();
+            #endregion
+
             enemyPathway = new List<Rectangle>();
             
             foreach (var o in map.ObjectGroups["EnemyPathways"].Objects)
@@ -131,6 +140,10 @@ namespace Incumming_Splash
             {
                 enemy.Update();
             }
+            #endregion
+
+            #region Camera
+            transformMatrix = camera.Follow(player.hitbox);
             #endregion
 
             var initPos = player.position;
@@ -171,7 +184,7 @@ namespace Incumming_Splash
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            spriteBatch.Begin();
+            spriteBatch.Begin(transformMatrix: transformMatrix);
 
             tileMapManager.Draw(spriteBatch);
 
