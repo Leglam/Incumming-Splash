@@ -22,12 +22,12 @@ namespace Incumming_Splash.src
             Console.WriteLine(frames);
         }
 
-        public void Draw(SpriteBatch spriteBatch, Vector2 position, GameTime gameTime, float millisecondsFrames = 300)
+        public void Draw(SpriteBatch spriteBatch, Vector2 position, GameTime gameTime, float millisecondsFrames = 500, SpriteEffects effect = SpriteEffects.None)
         {
             if (c < frames) 
             { 
                 var rect = new Rectangle(40 * c, rows, 64, spriteSheet.Height);
-                spriteBatch.Draw(spriteSheet, position, rect, Color.White);
+                spriteBatch.Draw(spriteSheet, position, rect, Color.White, 0f, new Vector2(), 1f, effect, 1);
                 timeSinceLastFrame += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
                 if (timeSinceLastFrame > millisecondsFrames)
                 {

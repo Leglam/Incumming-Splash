@@ -81,11 +81,11 @@ namespace Incumming_Splash
                     collisionRects.Add(new Rectangle((int)o.X, (int)o.Y, (int)o.Width, (int)o.Height));
                 }
 
-                if (o.Name == "start")
+                if (o.Name == "Start")
                 {
                     startRect = new Rectangle((int)o.X, (int)o.Y, (int)o.Width, (int)o.Height);
                 }
-                if (o.Name == "end")
+                if (o.Name == "End")
                 {
                     endRect = new Rectangle((int)o.X, (int)o.Y, (int)o.Width, (int)o.Height);
                 }
@@ -129,6 +129,8 @@ namespace Incumming_Splash
                 {
                     player.position.X = initPos.X;
                     player.velocity.X = initPos.X;
+                    player.position.Y = initPos.Y;
+                    player.velocity.Y = initPos.Y;
                     break;
                 }
             }

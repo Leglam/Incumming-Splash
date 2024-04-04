@@ -9,6 +9,7 @@ namespace Incumming_Splash.src
     {
         public Vector2 velocity;
         public Rectangle playerFallRect;
+        public SpriteEffects effect;
 
         public float playerSpeed = 5;
         public float fallSpeed = 2;
@@ -27,7 +28,7 @@ namespace Incumming_Splash.src
         public Player(Vector2 position,Texture2D runSprite, Texture2D idleSprite, Texture2D jumpSprite, Texture2D fallSprite) 
         {
             this.position = position;
-            velocity = new Vector2();
+            velocity = position;
 
             playerAnimation = new Animation[4];
             playerAnimation[0] = new Animation(idleSprite);
@@ -64,11 +65,13 @@ namespace Incumming_Splash.src
             {
                 velocity.X += playerSpeed;
                 playerAnimationController = currentAnimation.Run;
+                effect = SpriteEffects.None;
             }
             if (keyboardState.IsKeyDown(Keys.A))
             {
                 velocity.X -= playerSpeed;
                 playerAnimationController = currentAnimation.Run;
+                effect = SpriteEffects.FlipHorizontally;
             }
         }
 
@@ -103,10 +106,10 @@ namespace Incumming_Splash.src
             switch (playerAnimationController)
             {
                 case currentAnimation.Idle:
-                    playerAnimation[0].Draw(spriteBatch, position, gameTime, 150);
+                    playerAnimation[0].Draw(spriteBatch, position, gameTime, 150, effect);
                     break;
                 case currentAnimation.Run:
-                    playerAnimation[1].Draw(spriteBatch, position, gameTime, 150);
+                    playerAnimation[1].Draw(spriteBatch, position, gameTime, 150, effect);
                     break;
                 case currentAnimation.Jump:
                     playerAnimation[2].Draw(spriteBatch, position, gameTime, 150);

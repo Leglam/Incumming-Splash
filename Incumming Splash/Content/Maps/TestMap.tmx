@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="32" height="18" tilewidth="50" tileheight="50" infinite="0" nextlayerid="4" nextobjectid="8">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="32" height="18" tilewidth="50" tileheight="50" infinite="0" nextlayerid="5" nextobjectid="11">
  <tileset firstgid="1" source="World1.tsx"/>
  <layer id="1" name="Background" width="32" height="18">
   <data encoding="csv">
@@ -53,5 +53,10 @@
   <object id="5" x="950.667" y="700" width="598.667" height="48"/>
   <object id="6" x="700" y="800" width="398.667" height="53.3333"/>
   <object id="7" x="252" y="849.333" width="346.667" height="50.6667"/>
+  <object id="8" name="Start" x="499.747" y="381.3"/>
+  <object id="9" name="End" x="1405.13" y="670.115"/>
+ </objectgroup>
+ <objectgroup id="4" name="EnemyPathways">
+  <object id="10" name="0" x="572.761" y="511.104" width="655.512" height="34.0736"/>
  </objectgroup>
 </map>
