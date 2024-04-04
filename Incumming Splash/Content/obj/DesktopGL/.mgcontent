@@ -4,6 +4,7 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/LeglamOat/Desktop/ComGame_PJ/Incumming Splash/Incumming Splash/Incumming Splash/Content/Sprites/1 - Agent_Mike_Bullet (16 x 16).png</File>
     <File>C:/Users/LeglamOat/Desktop/ComGame_PJ/Incumming Splash/Incumming Splash/Incumming Splash/Content/Sprites/asuji1.png</File>
     <File>C:/Users/LeglamOat/Desktop/ComGame_PJ/Incumming Splash/Incumming Splash/Incumming Splash/Content/Sprites/asuji2.png</File>
     <File>C:/Users/LeglamOat/Desktop/ComGame_PJ/Incumming Splash/Incumming Splash/Incumming Splash/Content/Sprites/Player_IdleSpritesheet.jpg</File>
@@ -12,6 +13,7 @@
     <File>C:/Users/LeglamOat/Desktop/ComGame_PJ/Incumming Splash/Incumming Splash/Incumming Splash/Content/Tilesets/World1.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

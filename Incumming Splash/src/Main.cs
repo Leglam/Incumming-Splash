@@ -36,6 +36,10 @@ namespace Incumming_Splash
 
         #region Player
         private Player player;
+        private List<Bullet> bullets;
+        private Texture2D bulletTexture;
+        private int time_per_bullets;
+        private int points = 0;
         #endregion
 
         private SpriteFont textFont;
@@ -138,6 +142,10 @@ namespace Incumming_Splash
             ) ;
             #endregion
 
+            #region Bullet
+            bullets = new List<Bullet>();
+            bulletTexture = Content.Load<Texture2D>("Sprites/1 - Agent_Mike_Bullet (16 x 16)");
+            #endregion
         }
 
         protected override void Update(GameTime gameTime)
@@ -162,8 +170,58 @@ namespace Incumming_Splash
             }
             #endregion
 
+            #region Player
             var initPos = player.position;
             player.Update();
+
+            #region Bullet
+            if (player.isShooting)
+            {
+                if (time_per_bullets > 5 && bullets.ToArray().Length < 20)
+                {
+                    var temp_hitbox = new Rectangle((int)player.position.X+7, (int)player.position.Y+13, (int)bulletTexture.Width, (int)bulletTexture.Height);
+
+                    if (player.effect == SpriteEffects.None)
+                    {
+                        bullets.Add(new Bullet(bulletTexture, 4, temp_hitbox));
+                    }
+                    if (player.effect == SpriteEffects.FlipHorizontally)
+                    {
+                        bullets.Add(new Bullet(bulletTexture, -4, temp_hitbox));
+                    }
+
+                    time_per_bullets = 0;
+                }
+                else
+                {
+                    time_per_bullets++;
+                }
+            }
+
+            foreach(var bullet in bullets.ToArray())
+            {
+                bullet.Update();
+
+                foreach (var rect in collisionRects)
+                {
+                    if (rect.Intersects(bullet.hitbox))
+                    {
+                        bullets.Remove(bullet);
+                        break;
+                    }
+                }
+                foreach(var enemy in enemies.ToArray())
+                {
+                    if (bullet.hitbox.Intersects(enemy.hitbox))
+                    {
+                        bullets.Remove(bullet);
+                        enemies.Remove(enemy);
+                        points++;
+                        break;
+                    }
+                }
+            }
+            #endregion
 
             #region Player Collision;
             // y axis
@@ -193,6 +251,7 @@ namespace Incumming_Splash
             }
             #endregion
 
+            #endregion
             base.Update(gameTime);
         }
 
@@ -211,8 +270,18 @@ namespace Incumming_Splash
             }
             #endregion
 
-            player.Draw(spriteBatch, gameTime);
+            #region Player
+         
+            #region Bullets
+            foreach (var bullet in bullets.ToArray())
+            {
+                bullet.Draw(spriteBatch);
+            }
+            #endregion
             
+            player.Draw(spriteBatch, gameTime);
+
+            #endregion
             spriteBatch.End();
 
 

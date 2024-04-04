@@ -19,6 +19,7 @@ namespace Incumming_Splash.src
         public bool isFalling = true;
         public bool isIntersecting = false;
         public bool isJumping;
+        public bool isShooting;
 
         public Animation[] playerAnimation;
         public currentAnimation playerAnimationController;
@@ -44,6 +45,9 @@ namespace Incumming_Splash.src
             keyboardState = Keyboard.GetState();
 
             playerAnimationController = currentAnimation.Idle;
+
+            isShooting = keyboardState.IsKeyDown(Keys.Enter);
+
             Move(keyboardState);
             startY = position.Y;
             Jump(keyboardState);
