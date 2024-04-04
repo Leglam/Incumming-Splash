@@ -27,9 +27,9 @@ C:\Users\LeglamOat\Desktop\ComGame_PJ\Incumming Splash\Incumming Splash\Incummin
 C:\Users\LeglamOat\Desktop\ComGame_PJ\Incumming Splash\Incumming Splash\Incumming Splash\bin\Debug\net6.0\Content\Sprites\Player_Spritesheet.xnb
 C:\Users\LeglamOat\Desktop\ComGame_PJ\Incumming Splash\Incumming Splash\Incumming Splash\bin\Debug\net6.0\Content\Sprites\Player_IdleSpritesheet.xnb
 C:\Users\LeglamOat\Desktop\ComGame_PJ\Incumming Splash\Incumming Splash\Incumming Splash\obj\Debug\net6.0\Incumming Splash.sourcelink.json
-C:\Users\LeglamOat\Desktop\ComGame_PJ\Incumming Splash\Incumming Splash\Incumming Splash\bin\Debug\net6.0\Content\Maps\Test Map.tmx
-C:\Users\LeglamOat\Desktop\ComGame_PJ\Incumming Splash\Incumming Splash\Incumming Splash\bin\Debug\net6.0\Content\Maps\color-block.tsx
 C:\Users\LeglamOat\Desktop\ComGame_PJ\Incumming Splash\Incumming Splash\Incumming Splash\bin\Debug\net6.0\Content\Maps\World1.tsx
 C:\Users\LeglamOat\Desktop\ComGame_PJ\Incumming Splash\Incumming Splash\Incumming Splash\bin\Debug\net6.0\Content\Maps\map1.tmx
 C:\Users\LeglamOat\Desktop\ComGame_PJ\Incumming Splash\Incumming Splash\Incumming Splash\bin\Debug\net6.0\Content\TIlesets\World1.xnb
 C:\Users\LeglamOat\Desktop\ComGame_PJ\Incumming Splash\Incumming Splash\Incumming Splash\bin\Debug\net6.0\Content\Maps\TestMap.tmx
+C:\Users\LeglamOat\Desktop\ComGame_PJ\Incumming Splash\Incumming Splash\Incumming Splash\bin\Debug\net6.0\Content\Sprites\asuji1.xnb
+C:\Users\LeglamOat\Desktop\ComGame_PJ\Incumming Splash\Incumming Splash\Incumming Splash\bin\Debug\net6.0\Content\Sprites\asuji2.xnb

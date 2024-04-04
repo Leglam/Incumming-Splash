@@ -1,32 +1,41 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 
 namespace Incumming_Splash.src
 {
     internal class Player:Entity
     {
         public Vector2 velocity;
+        public Rectangle playerFallRect;
 
         public float playerSpeed = 5;
         public float fallSpeed = 2;
+        public float jumpSpeed = -15;
+        public float startY;
+
         public bool isFalling = true;
         public bool isIntersecting = false;
+        public bool isJumping;
 
         public Animation[] playerAnimation;
         public currentAnimation playerAnimationController;
 
         KeyboardState keyboardState;
 
-        public Player(Texture2D runSprite, Texture2D idleSprite) 
+        public Player(Vector2 position,Texture2D runSprite, Texture2D idleSprite, Texture2D jumpSprite, Texture2D fallSprite) 
         {
-            position = new Vector2();
+            this.position = position;
             velocity = new Vector2();
-            playerAnimation = new Animation[2];
 
+            playerAnimation = new Animation[4];
             playerAnimation[0] = new Animation(idleSprite);
             playerAnimation[1] = new Animation(runSprite);
+            playerAnimation[2] = new Animation(jumpSprite);
+            playerAnimation[3] = new Animation(fallSprite);
             hitbox = new Rectangle((int)position.X, (int)position.Y, 32, 32);
+            playerFallRect = new Rectangle((int)position.X + 3, (int)position.Y + 32, 32, (int)fallSpeed);
         }
 
         public override void Update()
@@ -34,11 +43,23 @@ namespace Incumming_Splash.src
             keyboardState = Keyboard.GetState();
 
             playerAnimationController = currentAnimation.Idle;
-            if (isFalling && !isIntersecting)
+            Move(keyboardState);
+            if (isFalling)
             {
                 velocity.Y += fallSpeed;
+                playerAnimationController = currentAnimation.Fall;
             }
-            
+            startY = position.Y;
+            Jump(keyboardState);
+            position = velocity;
+            hitbox.X = (int)position.X;
+            hitbox.Y = (int)position.Y;
+            playerFallRect.X = (int)position.X;
+            playerFallRect.Y = (int)(velocity.Y + 34);
+        }
+
+        private void Move(KeyboardState keyboardState)
+        {
             if (keyboardState.IsKeyDown(Keys.D))
             {
                 velocity.X += playerSpeed;
@@ -49,10 +70,32 @@ namespace Incumming_Splash.src
                 velocity.X -= playerSpeed;
                 playerAnimationController = currentAnimation.Run;
             }
+        }
 
-            position = velocity;
-            hitbox.X = (int)position.X;
-            hitbox.Y = (int)position.Y;
+        private void Jump(KeyboardState keyboardState)
+        {
+            if (isJumping)
+            {
+                velocity.Y += jumpSpeed;
+                jumpSpeed += 1;
+                Move(keyboardState);
+                playerAnimationController = currentAnimation.Jump;
+
+                if(velocity.Y >= startY)
+                {
+                    velocity.Y = startY;
+                    isJumping = false;
+                }
+            }
+            else
+            {
+                if (keyboardState.IsKeyDown(Keys.Space) && !isFalling)
+                {
+                    isJumping = true;
+                    isFalling = false;
+                    jumpSpeed = -15;
+                }
+            }
         }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
@@ -65,8 +108,13 @@ namespace Incumming_Splash.src
                 case currentAnimation.Run:
                     playerAnimation[1].Draw(spriteBatch, position, gameTime, 150);
                     break;
+                case currentAnimation.Jump:
+                    playerAnimation[2].Draw(spriteBatch, position, gameTime, 150);
+                    break;
+                case currentAnimation.Fall:
+                    playerAnimation[3].Draw(spriteBatch, position, gameTime, 600);
+                    break;
             }
-            
         }
     }
 }

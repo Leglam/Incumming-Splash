@@ -23,7 +23,6 @@
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.1.303" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\bin\DesktopGL\Maps\" />
     <Folder Include="Content\bin\DesktopGL\TIlesets\" />
     <Folder Include="Content\Maps\" />
     <Folder Include="Content\TIlesets\" />

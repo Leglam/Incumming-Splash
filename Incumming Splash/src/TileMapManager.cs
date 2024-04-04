@@ -15,7 +15,7 @@ namespace Incumming_Splash.src
         
         public TileMapManager(TmxMap map, Texture2D tileset, int tilesetTilesWide, int tileWidth, int tileHeight) 
         {
-            this.map = map;
+            this.map = map; 
             this.tileset = tileset;
             this.tilesetTilesWide = tilesetTilesWide;
             this.tileWidth = tileWidth;

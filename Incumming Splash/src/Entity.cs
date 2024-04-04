@@ -18,7 +18,8 @@ namespace Incumming_Splash.src
         {
             Idle,
             Run,
-
+            Jump,
+            Fall,
         }
 
         public abstract void Update();

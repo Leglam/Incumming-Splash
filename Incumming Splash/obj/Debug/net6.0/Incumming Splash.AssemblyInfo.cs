@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Incumming Splash")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd63406b2469a0c71b2fb446cbdd656aa2572507")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+931ccb2059192401054785913f161b8441289ec4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Incumming Splash")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Incumming Splash")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

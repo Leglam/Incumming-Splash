@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 using System.Collections.Generic;
 using TiledSharp;
 
@@ -19,7 +20,6 @@ namespace Incumming_Splash
         private List<Rectangle> collisionRects;
         private Rectangle startRect;
         private Rectangle endRect;
-
         #endregion
 
         #region Player
@@ -80,13 +80,25 @@ namespace Incumming_Splash
                 {
                     collisionRects.Add(new Rectangle((int)o.X, (int)o.Y, (int)o.Width, (int)o.Height));
                 }
+
+                if (o.Name == "start")
+                {
+                    startRect = new Rectangle((int)o.X, (int)o.Y, (int)o.Width, (int)o.Height);
+                }
+                if (o.Name == "end")
+                {
+                    endRect = new Rectangle((int)o.X, (int)o.Y, (int)o.Width, (int)o.Height);
+                }
             }
 
             #region Player
             player = new Player(
-                Content.Load<Texture2D>("Sprites/Player_Spritesheet"),
-                Content.Load<Texture2D>("Sprites/Player_IdleSpritesheet")
-            );
+                new Vector2(startRect.X, startRect.Y),
+                Content.Load<Texture2D>("Sprites/asuji1"),
+                Content.Load<Texture2D>("Sprites/asuji2"),
+                Content.Load<Texture2D>("Sprites/asuji1"),
+                Content.Load<Texture2D>("Sprites/asuji2")
+            ) ;
             #endregion
 
         }
@@ -95,15 +107,32 @@ namespace Incumming_Splash
         {
             var initPos = player.position;
             player.Update();
+
+            #region Player Collision;
+            // y axis
             foreach (var rect in collisionRects)
             {
-                if(rect.Intersects(player.hitbox))
+                if (!player.isJumping)
+                    player.isFalling = true;
+
+                if (rect.Intersects(player.playerFallRect))
                 {
-                    player.position.Y = initPos.Y;
-                    player.velocity.Y = initPos.Y;
+                    player.isFalling = false;
                     break;
                 }
             }
+
+            // x axis
+            foreach (var rect in collisionRects)
+            {
+                if (rect.Intersects(player.hitbox))
+                {
+                    player.position.X = initPos.X;
+                    player.velocity.X = initPos.X;
+                    break;
+                }
+            }
+            #endregion
 
             base.Update(gameTime);
         }
