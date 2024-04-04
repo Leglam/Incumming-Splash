@@ -34,3 +34,4 @@ C:\Users\LeglamOat\Desktop\ComGame_PJ\Incumming Splash\Incumming Splash\Incummin
 C:\Users\LeglamOat\Desktop\ComGame_PJ\Incumming Splash\Incumming Splash\Incumming Splash\bin\Debug\net6.0\Content\Sprites\asuji1.xnb
 C:\Users\LeglamOat\Desktop\ComGame_PJ\Incumming Splash\Incumming Splash\Incumming Splash\bin\Debug\net6.0\Content\Sprites\asuji2.xnb
 C:\Users\LeglamOat\Desktop\ComGame_PJ\Incumming Splash\Incumming Splash\Incumming Splash\bin\Debug\net6.0\Content\Sprites\1 - Agent_Mike_Bullet (16 x 16).xnb
+C:\Users\LeglamOat\Desktop\ComGame_PJ\Incumming Splash\Incumming Splash\Incumming Splash\bin\Debug\net6.0\Content\Fonts\ComicFont.xnb

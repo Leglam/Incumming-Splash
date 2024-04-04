@@ -35,6 +35,11 @@ namespace Incumming_Splash.src
             hitbox.Y = (int)position.Y;
         }
 
+        public bool hasHit(Rectangle playerRect)
+        {
+            return hitbox.Intersects(playerRect);
+        } 
+
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
             if (isFacingRight)

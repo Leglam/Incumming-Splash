@@ -40,6 +40,9 @@ namespace Incumming_Splash
         private Texture2D bulletTexture;
         private int time_per_bullets;
         private int points = 0;
+        private int healthPoint = 10;
+        private int time_per_dmg = 15;
+        private int hit_count = 0;
         #endregion
 
         private SpriteFont textFont;
@@ -83,6 +86,7 @@ namespace Incumming_Splash
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            textFont = Content.Load<SpriteFont>("Fonts/ComicFont");
 
             #region Tilemap
             map = new TmxMap("Content/Maps/TestMap.tmx");
@@ -93,6 +97,7 @@ namespace Incumming_Splash
             tileMapManager = new TileMapManager(map, tileset, TileSetTilesWidth, tileWidth, tileHeight);
             #endregion
 
+            #region Collision
             collisionRects = new List<Rectangle>();
             
             foreach (var o in map.ObjectGroups["Collision"].Objects)
@@ -111,6 +116,7 @@ namespace Incumming_Splash
                     endRect = new Rectangle((int)o.X, (int)o.Y, (int)o.Width, (int)o.Height);
                 }
             }
+            #endregion
 
             gameManager = new GameManager(endRect);
 
@@ -118,6 +124,7 @@ namespace Incumming_Splash
             camera = new Camera();
             #endregion
 
+            #region Enemies
             enemyPathway = new List<Rectangle>();
             
             foreach (var o in map.ObjectGroups["EnemyPathways"].Objects)
@@ -131,6 +138,19 @@ namespace Incumming_Splash
                 enemyPathway[0]
                 );
             enemies.Add( dinosaur );
+
+            dinosaur = new Enemy(
+                Content.Load<Texture2D>("Sprites/Player"),
+                enemyPathway[1]
+                );
+            enemies.Add(dinosaur);
+
+            dinosaur = new Enemy(
+                Content.Load<Texture2D>("Sprites/Player"),
+                enemyPathway[2]
+                );
+            enemies.Add(dinosaur);
+            #endregion
 
             #region Player
             player = new Player(
@@ -154,7 +174,18 @@ namespace Incumming_Splash
             foreach(var enemy in enemies)
             {
                 enemy.Update();
+                
+                if (enemy.hasHit(player.hitbox))
+                {
+                    hit_count++;
+                    if (hit_count > time_per_dmg)
+                    {
+                        healthPoint--;
+                        hit_count = 0;
+                    }
+                }
             }
+            
             #endregion
 
             #region Camera
@@ -166,7 +197,11 @@ namespace Incumming_Splash
             #region Managers
             if (gameManager.hasGameEnded(player.hitbox))
             {
-                Console.WriteLine("game");
+                Console.WriteLine("Game End");
+            }
+            if (healthPoint <= 0)
+            {
+                Console.WriteLine("Game Over");
             }
             #endregion
 
@@ -282,6 +317,9 @@ namespace Incumming_Splash
             player.Draw(spriteBatch, gameTime);
 
             #endregion
+
+            spriteBatch.DrawString(textFont, $"Your Health: {healthPoint}", player.position, Color.Black);
+
             spriteBatch.End();
 
 
