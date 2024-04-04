@@ -45,13 +45,15 @@ namespace Incumming_Splash.src
 
             playerAnimationController = currentAnimation.Idle;
             Move(keyboardState);
+            startY = position.Y;
+            Jump(keyboardState);
+
             if (isFalling)
             {
                 velocity.Y += fallSpeed;
                 playerAnimationController = currentAnimation.Fall;
             }
-            startY = position.Y;
-            Jump(keyboardState);
+
             position = velocity;
             hitbox.X = (int)position.X;
             hitbox.Y = (int)position.Y;

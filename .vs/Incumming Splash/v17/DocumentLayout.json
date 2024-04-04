@@ -7,16 +7,20 @@
       "RelativeMoniker": "D:0:0:{FFFC5FC5-195E-49E5-BF06-3017A6E67D10}|Incumming Splash\\Incumming Splash.csproj|solutionrelative:incumming splash\\src\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FFFC5FC5-195E-49E5-BF06-3017A6E67D10}|Incumming Splash\\Incumming Splash.csproj|c:\\users\\leglamoat\\desktop\\comgame_pj\\incumming splash\\incumming splash\\incumming splash\\src\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFFC5FC5-195E-49E5-BF06-3017A6E67D10}|Incumming Splash\\Incumming Splash.csproj|solutionrelative:incumming splash\\src\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFFC5FC5-195E-49E5-BF06-3017A6E67D10}|Incumming Splash\\Incumming Splash.csproj|c:\\users\\leglamoat\\desktop\\comgame_pj\\incumming splash\\incumming splash\\incumming splash\\src\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFFC5FC5-195E-49E5-BF06-3017A6E67D10}|Incumming Splash\\Incumming Splash.csproj|solutionrelative:incumming splash\\src\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FFFC5FC5-195E-49E5-BF06-3017A6E67D10}|Incumming Splash\\Incumming Splash.csproj|c:\\users\\leglamoat\\desktop\\comgame_pj\\incumming splash\\incumming splash\\incumming splash\\src\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFFC5FC5-195E-49E5-BF06-3017A6E67D10}|Incumming Splash\\Incumming Splash.csproj|solutionrelative:incumming splash\\src\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FFFC5FC5-195E-49E5-BF06-3017A6E67D10}|Incumming Splash\\Incumming Splash.csproj|c:\\users\\leglamoat\\desktop\\comgame_pj\\incumming splash\\incumming splash\\incumming splash\\src\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFFC5FC5-195E-49E5-BF06-3017A6E67D10}|Incumming Splash\\Incumming Splash.csproj|solutionrelative:incumming splash\\src\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFFC5FC5-195E-49E5-BF06-3017A6E67D10}|Incumming Splash\\Incumming Splash.csproj|c:\\users\\leglamoat\\desktop\\comgame_pj\\incumming splash\\incumming splash\\incumming splash\\src\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFFC5FC5-195E-49E5-BF06-3017A6E67D10}|Incumming Splash\\Incumming Splash.csproj|solutionrelative:incumming splash\\src\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FFFC5FC5-195E-49E5-BF06-3017A6E67D10}|Incumming Splash\\Incumming Splash.csproj|c:\\users\\leglamoat\\desktop\\comgame_pj\\incumming splash\\incumming splash\\incumming splash\\src\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,20 +50,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Camera.cs",
-              "DocumentMoniker": "C:\\Users\\LeglamOat\\Desktop\\ComGame_PJ\\Incumming Splash\\Incumming Splash\\Incumming Splash\\src\\Camera.cs",
-              "RelativeDocumentMoniker": "Incumming Splash\\src\\Camera.cs",
-              "ToolTip": "C:\\Users\\LeglamOat\\Desktop\\ComGame_PJ\\Incumming Splash\\Incumming Splash\\Incumming Splash\\src\\Camera.cs",
-              "RelativeToolTip": "Incumming Splash\\src\\Camera.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAdAAAA",
+              "DocumentIndex": 2,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\LeglamOat\\Desktop\\ComGame_PJ\\Incumming Splash\\Incumming Splash\\Incumming Splash\\src\\GameManager.cs",
+              "RelativeDocumentMoniker": "Incumming Splash\\src\\GameManager.cs",
+              "ToolTip": "C:\\Users\\LeglamOat\\Desktop\\ComGame_PJ\\Incumming Splash\\Incumming Splash\\Incumming Splash\\src\\GameManager.cs",
+              "RelativeToolTip": "Incumming Splash\\src\\GameManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T14:47:23.3Z",
+              "WhenOpened": "2024-04-04T16:22:01.883Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Users\\LeglamOat\\Desktop\\ComGame_PJ\\Incumming Splash\\Incumming Splash\\Incumming Splash\\src\\Enemy.cs",
               "RelativeDocumentMoniker": "Incumming Splash\\src\\Enemy.cs",
@@ -67,25 +71,49 @@
               "RelativeToolTip": "Incumming Splash\\src\\Enemy.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAAACkAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T13:31:11.732Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-04T13:31:11.732Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\LeglamOat\\Desktop\\ComGame_PJ\\Incumming Splash\\Incumming Splash\\Incumming Splash\\src\\Player.cs",
               "RelativeDocumentMoniker": "Incumming Splash\\src\\Player.cs",
               "ToolTip": "C:\\Users\\LeglamOat\\Desktop\\ComGame_PJ\\Incumming Splash\\Incumming Splash\\Incumming Splash\\src\\Player.cs",
               "RelativeToolTip": "Incumming Splash\\src\\Player.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAAACgAAAAAAAAA",
+              "ViewState": "AQIAACUAAAAAAAAAAAAAACsAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-30T04:16:16.514Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "Main.cs",
+              "DocumentMoniker": "C:\\Users\\LeglamOat\\Desktop\\ComGame_PJ\\Incumming Splash\\Incumming Splash\\Incumming Splash\\src\\Main.cs",
+              "RelativeDocumentMoniker": "Incumming Splash\\src\\Main.cs",
+              "ToolTip": "C:\\Users\\LeglamOat\\Desktop\\ComGame_PJ\\Incumming Splash\\Incumming Splash\\Incumming Splash\\src\\Main.cs",
+              "RelativeToolTip": "Incumming Splash\\src\\Main.cs",
+              "ViewState": "AQIAAIIAAAAAAAAAAAAAAKAAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-30T03:46:12.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Camera.cs",
+              "DocumentMoniker": "C:\\Users\\LeglamOat\\Desktop\\ComGame_PJ\\Incumming Splash\\Incumming Splash\\Incumming Splash\\src\\Camera.cs",
+              "RelativeDocumentMoniker": "Incumming Splash\\src\\Camera.cs",
+              "ToolTip": "C:\\Users\\LeglamOat\\Desktop\\ComGame_PJ\\Incumming Splash\\Incumming Splash\\Incumming Splash\\src\\Camera.cs",
+              "RelativeToolTip": "Incumming Splash\\src\\Camera.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T14:47:23.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Entity.cs",
               "DocumentMoniker": "C:\\Users\\LeglamOat\\Desktop\\ComGame_PJ\\Incumming Splash\\Incumming Splash\\Incumming Splash\\src\\Entity.cs",
               "RelativeDocumentMoniker": "Incumming Splash\\src\\Entity.cs",
@@ -97,20 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Main.cs",
-              "DocumentMoniker": "C:\\Users\\LeglamOat\\Desktop\\ComGame_PJ\\Incumming Splash\\Incumming Splash\\Incumming Splash\\src\\Main.cs",
-              "RelativeDocumentMoniker": "Incumming Splash\\src\\Main.cs",
-              "ToolTip": "C:\\Users\\LeglamOat\\Desktop\\ComGame_PJ\\Incumming Splash\\Incumming Splash\\Incumming Splash\\src\\Main.cs",
-              "RelativeToolTip": "Incumming Splash\\src\\Main.cs",
-              "ViewState": "AQIAAEcAAAAAAAAAAAAAAF4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-30T03:46:12.587Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Animation.cs",
               "DocumentMoniker": "C:\\Users\\LeglamOat\\Desktop\\ComGame_PJ\\Incumming Splash\\Incumming Splash\\Incumming Splash\\src\\Animation.cs",
               "RelativeDocumentMoniker": "Incumming Splash\\src\\Animation.cs",
@@ -122,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "TileMapManager.cs",
               "DocumentMoniker": "C:\\Users\\LeglamOat\\Desktop\\ComGame_PJ\\Incumming Splash\\Incumming Splash\\Incumming Splash\\src\\TileMapManager.cs",
               "RelativeDocumentMoniker": "Incumming Splash\\src\\TileMapManager.cs",

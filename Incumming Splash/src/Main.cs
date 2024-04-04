@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using TiledSharp;
 
 namespace Incumming_Splash
@@ -50,6 +51,10 @@ namespace Incumming_Splash
         private const int speed = 5;
 
         public const int ScreenW = 1024, ScreenH = 850;
+
+        #region Managers
+        private GameManager gameManager;
+        #endregion
 
         public Main()
         {
@@ -103,6 +108,8 @@ namespace Incumming_Splash
                 }
             }
 
+            gameManager = new GameManager(endRect);
+
             #region Camera
             camera = new Camera();
             #endregion
@@ -143,7 +150,16 @@ namespace Incumming_Splash
             #endregion
 
             #region Camera
-            transformMatrix = camera.Follow(player.hitbox);
+            Rectangle target = new Rectangle((int)player.position.X, (int)player.position.Y, 32, 32);
+            transformMatrix = camera.Follow(target);
+            #endregion
+
+            // for change map
+            #region Managers
+            if (gameManager.hasGameEnded(player.hitbox))
+            {
+                Console.WriteLine("game");
+            }
             #endregion
 
             var initPos = player.position;
